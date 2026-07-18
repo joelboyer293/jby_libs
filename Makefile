@@ -11,7 +11,7 @@ all: $(BIN_DIR) $(TEST_BINS)
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
-$(BIN_DIR)/%: $(SRC_DIR)/%.c trees.h
+$(BIN_DIR)/%: $(SRC_DIR)/%.c trees.h ring_buffer.h
 	$(CC) $(CFLAGS) $< -o $@
 
 run: all
